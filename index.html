@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARMAN</title>
+
+    <link rel="icon" href="./images/starman-basic.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src = "./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type = "text/javascript">document.oncontextmenu = function() {return false;}</script>
+</head>
+
+<body oncontextmenu = "return false" ondragstart= "return false" onselectstart = "return false">
+    <div class="starman">
+        <div class="hpgauge">
+            <div class="color">
+                <div class="text">
+                    <span class = 'left'>100</span><span class = "total">/100</span>
+                </div>
+            </div>
+        </div>
+        <img src="./images/starman-candybar.png" alt="starman">
+    </div>
+
+    <div class="starsystem">
+        <div class="star">
+            <div class = "starname">Sirius</div>
+            <div>8.6 Light Years from the Earth</div>
+        </div>
+    </div>
+
+    <div class="bighpgauge">
+            <div class="hpmark"></div>
+            <div class="color">
+                <div class="text">
+                    <span class="left">50000</span><span class="total">/50000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="respon">
+            <img src="./images/respon.png" alt="respon">
+        </div>
+
+    <div class="planet">
+        <img src="./images/planet(1).png" alt="planet">
+    </div>
+
+    <div class="skillnotice">
+        <span class="text">
+            <span class="newskill">You now got a new skill  </span>
+            <span class="candysmash">
+                 Candy Smash! 
+            </span>
+        </span>
+        <img src="./images/keyS.png" alt="keyS">
+    </div>
+
+    <div class="enemy ufo-first">
+        <div class="hpgauge">
+            <div class="color">
+                <sdiv class="text">
+                    <span class = 'left'>400</span><span class = "total">/400</span>
+                </sdiv>
+            </div>
+        </div>
+        <img src="./images/ufo(1).png" alt="spacecraft">
+    </div>
+
+    <div class="enemy second">
+
+        <div class="enemy ufo-second ufo-second1">
+            <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(1).png" alt="spacecraft">
+        </div>
+
+        <div class="enemy ufo-second ufo-second2">
+            <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(1).png" alt="spacecraft">
+        </div>
+        </div>
+
+    <!-- </div> -->
+
+    <div class="enemy third">
+
+        <div class="enemy ufo-third ufo-third1">
+            <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(1).png" alt="spacecraft">
+        </div>
+
+        <div class="enemy ufo-third ufo-third2">
+            <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(1).png" alt="spacecraft">
+        </div>
+
+        <div class="enemy ufo-third ufo-third3">
+            <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(1).png" alt="spacecraft">
+        </div>
+        </div>
+
+        <!-- </div> -->
+
+        <div class="enemy fourth">
+
+            <div class="enemy ufo-fourth ufo-fourth1">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+            <div class="enemy ufo-fourth ufo-fourth2">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+        </div>
+
+
+        <div class="enemy fifth">
+
+            <div class="enemy ufo-fifth ufo-fifth1">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+            <div class="enemy ufo-fifth ufo-fifth2">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+
+            <div class="enemy ufo-fifth ufo-fifth3">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+            <div class="enemy ufo-fifth ufo-fifth4">
+                <div class="hpgauge">
+                <div class="color">
+                    <div class="text">
+                        <span class = 'left'>400</span><span class = "total">/400</span>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/ufo(2).png" alt="spacecraft">
+            <div class="missile"></div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="enemy enemy1">
+        <div class="hpgauge">
+            <div class="color">
+                <div class="text">
+                    <span class = 'left'>1000</span><span class = "total">/1000</span>
+                </div>
+            </div>
+        </div>
+        <img src="./images/spacecraft(1).png" alt="spacecraft">
+    </div>
+
+    <div class="enemy enemy2">
+        <div class="hpgauge">
+            <div class="color">
+                <div class="text">
+                    <span class = 'left'>1000</span><span class = "total">/1000</span>
+                </div>
+            </div>
+        </div>
+        <img src="./images/spacecraft(1).png" alt="spacecraft">
+    </div> -->
+
+    <div class="positioncheck"></div>
+
+</body>
+</html>

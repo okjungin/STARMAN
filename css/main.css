@@ -1,0 +1,533 @@
+body {
+    /* background-color: transparent; */
+    background-image : url("../images/spacebackground(1).jpg");
+    position : relative;
+    cursor : pointer;
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    overflow-x : hidden;
+    overflow-y : hidden;
+    -webkit-user-select:none;
+          -moz-user-select:none;
+      -ms-user-select:none;
+     user-select:none
+}
+
+.starman {
+    position : absolute;
+    transition : 2s;
+    z-index : 10;
+    top : 80px;
+    left : 45px;
+}
+
+.starman .hpgauge {
+    font-weight : 700;
+    color : white;
+    border : 1px solid rgb(255, 255, 255);
+    border-radius : 10px;
+    height : 16px;
+    width : 70%;
+    transform : translateY(25px);
+    overflow : hidden;
+    margin : 0 auto;
+    box-sizing: border-box;
+}
+
+.starman .hpgauge .color {
+    background-color : red;
+    width : 100%;
+    height : 100%;
+    position : relative;
+}
+
+.starman .hpgauge .text {
+    position : absolute;
+    top : 1.5px;
+    left : 25px;
+    font-size : 14px;
+}
+
+.starman .hpgauge .text .left{
+
+}
+.starman .hpgauge .text .total {
+
+}
+
+.starman img {
+    width : 144px;
+    transition : .2s;
+}
+.starman.candybarsmash img {
+    background-image : url("../images/candybarsmash.png");
+    background-position-y : 15%;
+    background-size : 67%;
+    background-repeat : no-repeat;
+    background-position-x : 80%;
+}
+
+.starsystem {
+    width : 300px;
+    height : auto;
+    position : absolute;
+    top : 30px;
+    background-color : rgba(255, 255, 255, 0.26);
+    padding : 10px;
+    border-bottom-right-radius: 10px;
+    /* display : none; */
+}
+.starsystem .star {
+    width : 100%;
+    height : 100%;
+    /* display : block; */
+    color : white;
+    text-align : center;
+    font-weight : 900;
+}
+
+.starsystem .star .starname {
+    color : rgb(13, 178, 233);
+    font-size : 21px;
+}
+
+.bighpgauge {
+    width : 100vw;
+    background-color : transparent;
+    height : 30px;
+    display : flex;
+    box-sizing : border-box;
+    border-bottom : 1px solid white;
+    overflow : hidden;
+}
+
+.bighpgauge .color {
+    width : 100%;
+    background-color : rgba(0, 128, 0, 0.729);
+    height : 100%;
+    display : flex;
+    align-items: center;
+}
+
+.bighpgauge .hpmark {
+    /* position : absolute; */
+    z-index : 1;
+    left : 0;
+    background-color : rgb(9, 51, 4);
+    margin-left : 0;
+    width : 30px;
+    background-image : url("../images/hpmark.png");
+    background-size : 100%;
+    background-position : center;
+    height : 30px;
+}
+
+.bighpgauge .text{
+    position : absolute;
+    left : 45%;
+    font-size : 20px;
+    color : white;
+    font-weight : 700;
+    flex-grow : 1;
+    text-align : center;
+    transform : translateY(2px);
+}
+
+.respon {
+    position : absolute;
+    top : 65px;
+    left : -3px;
+    transform : rotateX(60deg);
+}
+
+.respon img {
+
+}
+
+.planet {
+    
+}
+
+.planet img {
+    width : 1000px;
+    position : absolute;
+    z-index : -1;
+    top : 300px;
+    left : -550px;
+}
+
+.skillnotice {
+    height : auto;
+    background-color : transparent;
+    color : red;
+    padding : 15px;
+    width : 100%;
+    text-align : center;
+    font-weight : 700;
+    font-size : 24px;
+    margin-top : 50px;
+    display : flex;
+    justify-content: center;
+    visibility : hidden;
+    /* padding : 30px; */
+}
+.skillnotice .candysmash {
+    color : pink;
+    font-weight : 900;
+}
+.skillnotice img {
+    width : 100px;
+    position : absolute;
+    margin-top  : auto;
+    top : 110px;
+    transition : transform 2s;
+    /* transform : translate(-300px,-100px); */
+}
+
+.enemy {
+
+}
+
+.enemy .hpgauge {
+    font-weight : 700;
+    color : white;
+    border : 1px solid rgb(255, 255, 255);
+    border-radius : 10px;
+    height : 16px;
+    width : 300px;
+    transform : translateY(75px);
+    overflow : hidden;
+    margin : 0 auto;
+    box-sizing: border-box;
+    transition : transform .2s;
+}
+
+.enemy .hpgauge .color {
+    background-color : purple;
+    width : 100%;
+    height : 100%;
+    position : relative;
+    transition : width .2s, opacity 0s;
+}
+
+.enemy .hpgauge .text{
+    position : absolute;
+    top : 1.5px;
+    left : 120px;
+    font-size : 14px;
+}
+
+.enemy img:hover {
+    border : 2px solid red;
+    border-radius : 50%;
+    box-sizing : border-box;
+    background-color : rgba(255, 0, 0, 0.275);
+}
+
+.enemy.ufo-first {
+    position : absolute;
+    top : 35vh;
+    right : -100px;
+    animation-name : enemyapproaching1;
+    animation-duration : 15s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+    transition : opacity 2s;
+}
+.enemy.ufo-first img {
+    width : 192px;
+    transition : transform 2s;
+}
+/* .enemy.ufo-first.burst img {
+    background-image : url("../images/burst.png");
+    background-position-x : 50%;
+    background-position-y : 50%;
+} */
+.enemy.ufo-first .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+.enemy.ufo-first .hpgauge .text {
+     left : 45px;
+}
+
+.enemy.second {
+    
+}
+
+.enemy.second .enemy.ufo-second {
+    position : absolute;
+    animation-name : enemyapproaching2;
+    animation-duration : 20s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; /* 가속도 제거 */
+    transition : opacity 2s;
+    right : -600px;
+}
+
+.enemy.second .enemy.ufo-second img {
+    width : 192px;
+    transition : transform 2s;
+}
+
+.enemy.second .enemy.ufo-second .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+
+.enemy.second .enemy.ufo-second .text{
+    left : 45px;
+}
+
+.enemy.second .enemy.ufo-second.ufo-second1 {
+    top : 20vh;
+}
+.enemy.second .enemy.ufo-second.ufo-second2 {
+    top : 50vh;
+}
+
+
+
+.enemy.third {
+
+}
+
+.enemy.third .enemy.ufo-third {
+    position : absolute;
+    animation-name : enemyapproaching3;
+    animation-duration : 27s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; /* 가속도 제거 */
+    transition : opacity 2s;
+    right : -1300px;
+}   
+
+.enemy.third .enemy.ufo-third img {
+    width : 192px;
+    transition : transform 2s;
+}
+
+.enemy.third .enemy.ufo-third .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+
+.enemy.third .enemy.ufo-third .text{
+    left : 45px;
+}
+
+.enemy.third .enemy.ufo-third.ufo-third1 {
+    top : 5vh;
+}
+.enemy.third .enemy.ufo-third.ufo-third2 {
+    top : 35vh;
+}  
+.enemy.third .enemy.ufo-third.ufo-third3 {
+    top : 65vh;
+}
+
+
+
+.enemy.fourth {
+
+}
+
+.enemy.fourth .enemy.ufo-fourth {
+    position : absolute;
+    animation-name : enemyapproaching4;
+    animation-duration : 34s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; 
+    transition : opacity 2s;
+    right : -2000px;
+}   
+
+.enemy.fourth .enemy.ufo-fourth img {
+    width : 192px;
+    transition : transform 2s;
+}
+
+.enemy.fourth .enemy.ufo-fourth .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+
+.enemy.fourth .enemy.ufo-fourth .text{
+    left : 45px;
+}
+
+.enemy.fourth .enemy.ufo-fourth.ufo-fourth1 {
+    top : 20vh;
+}
+.enemy.fourth .enemy.ufo-fourth.ufo-fourth2 {
+    top : 50vh;
+}   
+.enemy.fourth .enemy.ufo-fourth .missile {
+    width : 70px;
+    height : 2px;
+    background-color : rgb(255, 191, 0);
+    border-radius : 10px;
+    position : absolute;
+    left : 100px;
+    animation-name : missileapproaching1;
+    animation-duration : 5s;
+    animation-timing-function : linear; 
+    animation-iteration-count: infinite;
+    animation-delay : 20s;
+}
+
+
+
+
+.enemy.fifth {
+
+}
+
+.enemy.fifth .enemy.ufo-fifth {
+    position : absolute;
+    animation-name : enemyapproaching5;
+    animation-duration : 41s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; 
+    transition : opacity 2s;
+    right : -2700px;
+}   
+
+.enemy.fifth .enemy.ufo-fifth img {
+    width : 192px;
+    transition : transform 2s;
+}
+
+.enemy.fifth .enemy.ufo-fifth .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+
+.enemy.fifth .enemy.ufo-fifth .text{
+    left : 45px;
+}
+
+.enemy.fifth .enemy.ufo-fifth.ufo-fifth1 {
+    top : 5vh;
+}
+.enemy.fifth .enemy.ufo-fifth.ufo-fifth2 {
+    top : 25vh;
+}   
+.enemy.fifth .enemy.ufo-fifth.ufo-fifth3 {
+    top : 45vh;
+}
+.enemy.fifth .enemy.ufo-fifth.ufo-fifth4 {
+    top : 65vh;
+}   
+.enemy.fifth .enemy.ufo-fifth .missile {
+    width : 70px;
+    height : 2px;
+    background-color : rgb(255, 191, 0);
+    border-radius : 10px;
+    position : absolute;
+    left : 100px;
+    animation-name : missileapproaching1;
+    animation-duration : 5s;
+    animation-timing-function : linear; 
+    animation-iteration-count: infinite;
+    animation-delay : 27s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .enemy.enemy1,
+.enemy.enemy2 {
+    transition : transform 6s, opacity 2s;
+    position : absolute;
+    right : -10px;
+    animation-name : enemyapproaching; 
+    animation-duration : 30s;
+    animation-fill-mode : forwards;
+    display : none;
+}
+
+.enemy.enemy1 {
+    top : 5vh;
+}
+
+.enemy.enemy2 {
+    top : 45vh;
+}
+
+.enemy.enemy1 img,
+.enemy.enemy2 img {
+    width : 400px;
+    z-index : -1;
+} */
+
+.positioncheck {
+    border : 2px solid green;
+    width : 50px;
+    height : 100px;
+    position : absolute;
+    top : 220px;
+    right : 180px;
+    display : none;
+}
+
+@keyframes enemyapproaching1 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(-1500px);
+    }
+}
+
+@keyframes enemyapproaching2 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-2000px))
+    }
+}
+
+@keyframes enemyapproaching3 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-2700px))
+    }
+}
+
+@keyframes enemyapproaching4 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-3400px))
+    }
+}
+@keyframes missileapproaching1 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-1500px))
+    }
+}
+@keyframes enemyapproaching5 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-4100px))
+    }
+}
