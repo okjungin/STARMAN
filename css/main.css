@@ -38,6 +38,7 @@ body {
     width : 100%;
     height : 100%;
     position : relative;
+    transition : .2s;
 }
 
 .starman .hpgauge .text {
@@ -62,6 +63,13 @@ body {
     background-image : url("../images/candybarsmash.png");
     background-position-y : 15%;
     background-size : 67%;
+    background-repeat : no-repeat;
+    background-position-x : 80%;
+}
+.starman.giantcandybarsmash img {
+    background-image : url("../images/candybarsmash.png");
+    background-position-y : 15%;
+    background-size : 150%;
     background-repeat : no-repeat;
     background-position-x : 80%;
 }
@@ -106,6 +114,7 @@ body {
     height : 100%;
     display : flex;
     align-items: center;
+    /* transition : width .2s; */
 }
 
 .bighpgauge .hpmark {
@@ -155,7 +164,7 @@ body {
     left : -550px;
 }
 
-.skillnotice {
+.skillnotice.skillnotice1 {
     height : auto;
     background-color : transparent;
     color : red;
@@ -170,17 +179,49 @@ body {
     visibility : hidden;
     /* padding : 30px; */
 }
-.skillnotice .candysmash {
+.skillnotice.skillnotice1 .candysmash {
     color : pink;
     font-weight : 900;
 }
-.skillnotice img {
-    width : 100px;
+.skillnotice.skillnotice1 img {
+    width : 108px;
     position : absolute;
     margin-top  : auto;
     top : 110px;
     transition : transform 2s;
+    /* visibility : visible; */
+    /* transform : translate(-300px,-90px); */
     /* transform : translate(-300px,-100px); */
+}
+
+.skillnotice.skillnotice2 {
+    height : auto;
+    background-color : transparent;
+    color : red;
+    padding : 15px;
+    width : 100%;
+    text-align : center;
+    font-weight : 700;
+    font-size : 24px;
+    margin-top : -55px;
+    display : flex;
+    justify-content: center;
+    visibility : hidden;
+    /* padding : 30px; */
+}
+.skillnotice.skillnotice2 .giantcandy {
+    color : pink;
+    font-weight : 900;
+}
+.skillnotice.skillnotice2 img {
+    width : 100px;
+    height : 105px;
+    position : absolute;
+    margin-top  : auto;
+    top : 110px;
+    transition : transform 2s;
+    /* visibility : visible; */
+    /* transform : translate(-250px,-90px); */
 }
 
 .enemy {
@@ -226,8 +267,8 @@ body {
 .enemy.ufo-first {
     position : absolute;
     top : 35vh;
-    right : -100px;
-    animation-name : enemyapproaching1;
+    right : -200px;
+    animation-name : enemyapproaching;
     animation-duration : 15s;
     animation-fill-mode : forwards;
     animation-timing-function : linear;
@@ -256,12 +297,13 @@ body {
 
 .enemy.second .enemy.ufo-second {
     position : absolute;
-    animation-name : enemyapproaching2;
-    animation-duration : 20s;
+    animation-name : enemyapproaching;
+    animation-duration : 15s;
     animation-fill-mode : forwards;
     animation-timing-function : linear; /* 가속도 제거 */
+    animation-delay : 5s;
     transition : opacity 2s;
-    right : -600px;
+    right : -200px;
 }
 
 .enemy.second .enemy.ufo-second img {
@@ -293,12 +335,13 @@ body {
 
 .enemy.third .enemy.ufo-third {
     position : absolute;
-    animation-name : enemyapproaching3;
-    animation-duration : 27s;
+    animation-name : enemyapproaching;
+    animation-duration : 15s;
     animation-fill-mode : forwards;
     animation-timing-function : linear; /* 가속도 제거 */
+    animation-delay : 12s;
     transition : opacity 2s;
-    right : -1300px;
+    right : -200px;
 }   
 
 .enemy.third .enemy.ufo-third img {
@@ -333,12 +376,13 @@ body {
 
 .enemy.fourth .enemy.ufo-fourth {
     position : absolute;
-    animation-name : enemyapproaching4;
-    animation-duration : 34s;
+    animation-name : enemyapproaching;
+    animation-duration : 15s;
+    animation-delay : 19s;
     animation-fill-mode : forwards;
     animation-timing-function : linear; 
     transition : opacity 2s;
-    right : -2000px;
+    right : -200px;
 }   
 
 .enemy.fourth .enemy.ufo-fourth img {
@@ -372,8 +416,11 @@ body {
     animation-duration : 5s;
     animation-timing-function : linear; 
     animation-iteration-count: infinite;
-    animation-delay : 20s;
+    animation-delay : 19s;
 }
+/* .enemy.fourth .enemy.ufo-fourth.ufo-fourth1 .missile.removed {
+
+} */
 
 
 
@@ -384,12 +431,13 @@ body {
 
 .enemy.fifth .enemy.ufo-fifth {
     position : absolute;
-    animation-name : enemyapproaching5;
-    animation-duration : 41s;
+    animation-name : enemyapproaching;
+    animation-duration : 15s;
+    animation-delay : 26s;
     animation-fill-mode : forwards;
     animation-timing-function : linear; 
     transition : opacity 2s;
-    right : -2700px;
+    right : -200px;
 }   
 
 .enemy.fifth .enemy.ufo-fifth img {
@@ -429,8 +477,88 @@ body {
     animation-duration : 5s;
     animation-timing-function : linear; 
     animation-iteration-count: infinite;
-    animation-delay : 27s;
+    animation-delay : 26s;
 }
+
+
+.enemy.sixth {
+
+}
+
+.enemy.sixth .enemy.ufo-sixth {
+    position : absolute;
+    animation : enemyapproaching;
+    animation-delay : 33s;
+    /* animation : enemyrotating infinite; */
+    animation-duration : 15s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; 
+    transition : opacity 2s;
+    right : -300px;
+}   
+
+.enemy.sixth .enemy.ufo-sixth img {
+    width : 288px;
+    transition : transform 2s;
+    transform : rotate(0deg);
+}
+
+.enemy.sixth .enemy.ufo-sixth .hpgauge{
+    transform : translateY(40px);
+    width : 75%;
+}
+
+.enemy.sixth .enemy.ufo-sixth .text{
+    left : 80px;
+}
+
+.enemy.sixth .enemy.ufo-sixth.ufo-sixth1 {
+    top : 15vh;
+}
+.enemy.sixth .enemy.ufo-sixth.ufo-sixth2 {
+    top : 50vh;
+}   
+
+.enemy.seventh {
+
+}
+
+.enemy.seventh .enemy.ufo-seventh {
+    position : absolute;
+    animation : enemyapproaching;
+    animation-delay : 37s;
+    /* animation : enemyrotating infinite; */
+    animation-duration : 15s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear; 
+    transition : opacity 2s;
+    right : -300px;
+}   
+
+.enemy.seventh .enemy.ufo-seventh img {
+    width : 288px;
+    transition : transform 2s;
+    transform : rotate(0deg);
+}
+
+.enemy.seventh .enemy.ufo-seventh .hpgauge{
+    transform : translateY(0px);
+    width : 75%;
+}
+
+.enemy.seventh .enemy.ufo-seventh .text{
+    left : 80px;
+}
+
+.enemy.seventh .enemy.ufo-seventh.ufo-seventh1 {
+    top : 15vh;
+}
+.enemy.seventh .enemy.ufo-seventh.ufo-seventh2 {
+    top : 50vh;
+}   
+
+
+
 
 
 
@@ -480,16 +608,16 @@ body {
     display : none;
 }
 
-@keyframes enemyapproaching1 {
+@keyframes enemyapproaching {
     0% {
         transform : translateX(0);
     }
     100% {
-        transform : translateX(-1500px);
+        transform : translateX(-1800px);
     }
 }
 
-@keyframes enemyapproaching2 {
+/* @keyframes enemyapproaching2 {
     0% {
         transform : translateX(0);
     }
@@ -514,7 +642,7 @@ body {
     100% {
         transform : translateX(calc(-3400px))
     }
-}
+} */
 @keyframes missileapproaching1 {
     0% {
         transform : translateX(0);
@@ -529,5 +657,29 @@ body {
     }
     100% {
         transform : translateX(calc(-4100px))
+    }
+}
+@keyframes enemyapproaching6 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-4800px))
+    }
+}
+/* @keyframes enemyrotating {
+    0% {
+        transform : rotate(0);
+    }
+    100% {
+        transform : rotate(360deg);
+    }
+} */
+@keyframes enemyapproaching7 {
+    0% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(calc(-5000px))
     }
 }
