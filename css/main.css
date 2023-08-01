@@ -14,7 +14,7 @@ body {
 
 .starman {
     position : absolute;
-    transition : 2s;
+    transition : 1s;
     z-index : 10;
     top : 80px;
     left : 45px;
@@ -164,10 +164,23 @@ body {
     left : -550px;
 }
 
+.weapon-candybar {
+    width : 50px;
+    background-color : white;
+    height : 50px;
+    position : absolute;
+    left : 330px;
+    top : 35px;
+    border-radius : 10px;
+    background-image : url("../images/weapon-candybar.png");
+    background-size : 100%;
+    background-repeat : no-repeat;
+}
+
 .skillnotice.skillnotice1 {
     height : auto;
     background-color : transparent;
-    color : red;
+    color : white;
     padding : 15px;
     width : 100%;
     text-align : center;
@@ -183,21 +196,24 @@ body {
     color : pink;
     font-weight : 900;
 }
-.skillnotice.skillnotice1 img {
-    width : 108px;
+.skillnotice.skillnotice1 .img-candysmash {
+    width : 50px;
+    background-color : pink;
+    height : 50px;
     position : absolute;
-    margin-top  : auto;
-    top : 110px;
+    left : 49vw;
+    top : 150px;
+    border-radius : 10px;
+    background-image : url("../images/skill-candysmash.png");
+    background-size : 100%;
+    background-repeat : no-repeat;
     transition : transform 2s;
-    /* visibility : visible; */
-    /* transform : translate(-300px,-90px); */
-    /* transform : translate(-300px,-100px); */
 }
 
 .skillnotice.skillnotice2 {
     height : auto;
     background-color : transparent;
-    color : red;
+    color : white;
     padding : 15px;
     width : 100%;
     text-align : center;
@@ -213,15 +229,18 @@ body {
     color : pink;
     font-weight : 900;
 }
-.skillnotice.skillnotice2 img {
-    width : 100px;
-    height : 105px;
+.skillnotice.skillnotice2 .img-giantcandy {
+    width : 50px;
+    background-color : pink;
+    height : 50px;
     position : absolute;
-    margin-top  : auto;
-    top : 110px;
+    left : 49vw;
+    top : 150px;
+    border-radius : 10px;
+    background-image : url("../images/skill-giantcandy.png");
+    background-size : 100%;
+    background-repeat : no-repeat;
     transition : transform 2s;
-    /* visibility : visible; */
-    /* transform : translate(-250px,-90px); */
 }
 
 .enemy {
@@ -527,7 +546,6 @@ body {
     position : absolute;
     animation : enemyapproaching;
     animation-delay : 37s;
-    /* animation : enemyrotating infinite; */
     animation-duration : 15s;
     animation-fill-mode : forwards;
     animation-timing-function : linear; 
@@ -556,6 +574,136 @@ body {
 .enemy.seventh .enemy.ufo-seventh.ufo-seventh2 {
     top : 50vh;
 }   
+
+
+.enemy.eightth {
+
+}
+
+.enemy.eighth .enemy.ufo-eighth {
+    position : absolute;
+    transition : opacity 2s;
+    right : -300px;
+}   
+
+.enemy.eighth .enemy.ufo-eighth img {
+    width : 288px;
+    transition : transform 2s;
+}
+
+.enemy.eighth .enemy.ufo-eighth .hpgauge{
+    transform : translateY(60px);
+    width : 60%;
+}
+
+.enemy.eighth .enemy.ufo-eighth .text{
+    left : 60px;
+}
+
+.enemy.eighth .enemy.ufo-eighth.ufo-eighth1 {
+    top : 15vh;
+    animation-name : enemyeighth1approaching;
+    animation-delay : 37s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}
+.enemy.eighth .enemy.ufo-eighth.ufo-eighth2 {
+    top : 50vh;
+    animation-name : enemyeighth2approaching;
+    animation-delay : 37s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}   
+.enemy.eighth .enemy.ufo-eighth .missile {
+    width : 120px;
+    height : 3px;
+    background-color : rgb(217, 7, 7);
+    border-radius : 10px;
+    position : absolute;
+    left : -50px;
+    bottom : 147px;
+    animation-name : missileapproaching1;
+    animation-duration : 5s;
+    animation-timing-function : linear; 
+    animation-iteration-count: infinite;
+    animation-delay : 38s;
+    visibility : hidden;
+}
+
+
+.enemy.nineth {
+
+}
+
+.enemy.nineth .enemy.ufo-nineth {
+    position : absolute;
+    transition : opacity 2s;
+    right : -300px;
+}   
+
+.enemy.nineth .enemy.ufo-nineth img {
+    width : 288px;
+    transition : transform 2s;
+}
+
+.enemy.nineth .enemy.ufo-nineth .hpgauge{
+    transform : translateY(60px);
+    width : 60%;
+}
+
+.enemy.nineth .enemy.ufo-nineth .text{
+    left : 60px;
+}
+
+.enemy.nineth .enemy.ufo-nineth.ufo-nineth1 {
+    top : 5vh;
+    animation-name : enemynineth1approaching;
+    animation-delay : 47s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}
+.enemy.nineth .enemy.ufo-nineth.ufo-nineth2 {
+    top : 25vh;
+    animation-name : enemyeighth1approaching;
+    animation-delay : 47s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}   
+.enemy.nineth .enemy.ufo-nineth.ufo-nineth3 {
+    top : 45vh;
+    animation-name : enemyeighth2approaching;
+    animation-delay : 47s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}
+.enemy.nineth .enemy.ufo-nineth.ufo-nineth4 {
+    top : 65vh;
+    animation-name : enemynineth4approaching;
+    animation-delay : 47s;
+    animation-duration : 5s;
+    animation-fill-mode : forwards;
+    animation-timing-function : linear;
+}   
+.enemy.nineth .enemy.ufo-nineth .missile {
+    width : 120px;
+    height : 3px;
+    background-color : rgb(217, 7, 7);
+    border-radius : 10px;
+    position : absolute;
+    left : -50px;
+    bottom : 147px;
+    animation-name : missileapproaching1;
+    animation-duration : 5s;
+    animation-timing-function : linear; 
+    animation-iteration-count: infinite;
+    animation-delay : 48s;
+    visibility : hidden;
+}
 
 
 
@@ -616,70 +764,57 @@ body {
         transform : translateX(-1800px);
     }
 }
-
-/* @keyframes enemyapproaching2 {
-    0% {
-        transform : translateX(0);
-    }
-    100% {
-        transform : translateX(calc(-2000px))
-    }
-}
-
-@keyframes enemyapproaching3 {
-    0% {
-        transform : translateX(0);
-    }
-    100% {
-        transform : translateX(calc(-2700px))
-    }
-}
-
-@keyframes enemyapproaching4 {
-    0% {
-        transform : translateX(0);
-    }
-    100% {
-        transform : translateX(calc(-3400px))
-    }
-} */
 @keyframes missileapproaching1 {
     0% {
         transform : translateX(0);
+        visibility : visible
     }
     100% {
-        transform : translateX(calc(-1500px))
+        transform : translateX(calc(-1500px));
+        visibility : hidden;
     }
 }
-@keyframes enemyapproaching5 {
+@keyframes enemyeighth1approaching {
     0% {
-        transform : translateX(0);
+        transform : translate(0);
+    }
+    50% {
+        transform : translate(-900px,-75px);
     }
     100% {
-        transform : translateX(calc(-4100px))
+        transform : translate(-1800px,0);
     }
 }
-@keyframes enemyapproaching6 {
+@keyframes enemyeighth2approaching {
     0% {
-        transform : translateX(0);
+        transform : translate(0);
+    }
+    50% {
+        transform : translate(-900px,75px);
     }
     100% {
-        transform : translateX(calc(-4800px))
+        transform : translate(-1800px,0);
     }
 }
-/* @keyframes enemyrotating {
+@keyframes enemynineth1approaching {
     0% {
-        transform : rotate(0);
+        transform : translate(0);
+    }
+    50% {
+        transform : translate(-900px,150px);
     }
     100% {
-        transform : rotate(360deg);
+        transform : translate(-1800px,0);
     }
-} */
-@keyframes enemyapproaching7 {
+}
+@keyframes enemynineth4approaching {
     0% {
-        transform : translateX(0);
+        transform : translate(0);
+    }
+    50% {
+        transform : translate(-900px,-150px);
     }
     100% {
-        transform : translateX(calc(-5000px))
+        transform : translate(-1800px,0);
     }
 }
